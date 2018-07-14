@@ -1,3 +1,24 @@
-/**
- * Created by I323506 on 12/07/2018.
- */
+'use strict';
+
+ConfigRouter.$inject = ['$stateProvider'];
+
+function ConfigRouter($stateProvider) {
+    var helloState = {
+        name: 'hello',
+        url: '/hello',
+        template: '<h3>hello world!</h3>'
+    };
+
+    var aboutState = {
+        name: 'about',
+        url: '/about',
+        template: '<h3>Its the UI-Router hello world app!</h3>'
+    };
+
+    $stateProvider.state(helloState);
+    $stateProvider.state(aboutState);
+}
+
+module.exports = ConfigRouter;
+
+// angular.module('helloworld').config(ConfigRouter);

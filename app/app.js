@@ -1,8 +1,15 @@
 var angular = require("angular");
-angular.module('helloworld', []);
+// var uiRoute = require("angular-ui-router");
+import uiRoute from 'angular-ui-router';
 
+var ConfigRouter = require('./routing');
+angular.module('helloworld', [uiRoute])
+    .config(ConfigRouter);
+
+// require('./routing');
 require('./js/controllers/MainController');
-// var myApp = angular.module('helloworld', ['ui.router']);
+
+// var myApp = angular.module('helloworld', [uiRoute]);
 
 
 
