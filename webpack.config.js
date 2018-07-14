@@ -5,7 +5,7 @@ module.exports = {
     context: __dirname + '/app',
     entry: {
         app: './app.js',
-        vendor: ['angular']
+        vendor: ['angular', 'angular-ui-router']
     },
     output: {
         path: __dirname + '/js',
@@ -32,5 +32,8 @@ module.exports = {
             }
         },
         runtimeChunk: 'single'
+    },
+    performance: {
+        hints: process.env.NODE_ENV === 'production' ? "warning" : false
     }
 };
