@@ -19,7 +19,15 @@ module.exports = {
             path.resolve('./lib')
         ]
     },
-
+    module: {
+        rules: [
+            {
+                // THIS IS THE MAGIC!
+                test: /\.html$/,
+                exclude: /node_modules/,
+                loader: 'raw-loader'
+            }]  // THAT WAS THE MAGIC!
+    },
     watch: true,
     optimization: {
         splitChunks: {
