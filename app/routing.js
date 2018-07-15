@@ -1,8 +1,10 @@
 'use strict';
 
-ConfigRouter.$inject = ['$stateProvider'];
+ConfigRouter.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-function ConfigRouter($stateProvider) {
+function ConfigRouter($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/hello');
+
     var helloState = {
         name: 'hello',
         url: '/hello',
