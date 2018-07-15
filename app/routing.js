@@ -8,7 +8,7 @@ function ConfigRouter($stateProvider, $urlRouterProvider) {
     var helloState = {
         name: 'hello',
         url: '/hello',
-        template: require('./partials/smallTemplate.html')
+        templateUrl: './partials/smallTemplate.html'
     };
 
     var aboutState = {

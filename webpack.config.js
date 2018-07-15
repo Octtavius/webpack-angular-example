@@ -22,6 +22,12 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.js$/,
+                use: [
+                    {loader: 'angular1-templateurl-loader'}
+                ]
+            },
+            {
                 // THIS IS THE MAGIC!
                 test: /\.html$/,
                 exclude: /node_modules/,
